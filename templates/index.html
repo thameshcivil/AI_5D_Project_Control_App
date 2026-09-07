@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Integrated 5D Project Control System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">5D</div>
+      <div class="brand-text">
+        <div class="brand-title">Project Control</div>
+        <div class="brand-sub">AI-Integrated System</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-tab="overview">
+        <span class="nav-ico">◧</span> Overview
+      </button>
+      <button class="nav-item" data-tab="qto">
+        <span class="nav-ico">▦</span> AI Quantity Takeoff
+      </button>
+      <button class="nav-item" data-tab="boq">
+        <span class="nav-ico">≡</span> BOQ &amp; Cost
+      </button>
+      <button class="nav-item" data-tab="schedule">
+        <span class="nav-ico">▤</span> Schedule &amp; Resources
+      </button>
+      <button class="nav-item" data-tab="delay">
+        <span class="nav-ico">◔</span> Delay Risk (AI)
+      </button>
+      <button class="nav-item" data-tab="cashflow">
+        <span class="nav-ico">∿</span> Cash Flow Forecast
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-line">{{ meta.project_name }}</div>
+      <div class="footer-line muted">{{ meta.location }}</div>
+      <div class="footer-line muted">M.E. CEM · Sem 3 Project</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <header class="topbar">
+      <div class="topbar-title">
+        <h1 id="page-title">Project Overview</h1>
+        <p id="page-sub" class="muted">Live snapshot of the 5D control model — geometry, time, and cost, in one place.</p>
+      </div>
+      <div class="topbar-meta">
+        <div class="chip">Thirumalai Engineering College</div>
+        <div class="chip chip-muted">Anna University</div>
+      </div>
+    </header>
+
+    <!-- ===================== OVERVIEW ===================== -->
+    <section id="tab-overview" class="tab active">
+      <div class="grid kpi-grid">
+        <div class="card kpi">
+          <div class="kpi-label">Total Project Cost</div>
+          <div class="kpi-value" id="kpi-cost">—</div>
+          <div class="kpi-foot muted">Auto-derived from AI-generated BOQ</div>
+        </div>
+        <div class="card kpi">
+          <div class="kpi-label">Planned Duration</div>
+          <div class="kpi-value" id="kpi-duration">—</div>
+          <div class="kpi-foot muted">Working days, Sundays excluded</div>
+        </div>
+        <div class="card kpi">
+          <div class="kpi-label">Built-up Area</div>
+          <div class="kpi-value" id="kpi-area">—</div>
+          <div class="kpi-foot muted">G+2, {{ meta.num_units }} units</div>
+        </div>
+        <div class="card kpi">
+          <div class="kpi-label">Delay Model Accuracy</div>
+          <div class="kpi-value" id="kpi-accuracy">—</div>
+          <div class="kpi-foot muted">Random Forest · 260 historical projects</div>
+        </div>
+      </div>
+
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head">
+            <h3>Project Profile</h3>
+          </div>
+          <table class="kv-table">
+            <tr><td>Project</td><td id="ov-name">—</td></tr>
+            <tr><td>Type</td><td id="ov-type">—</td></tr>
+            <tr><td>Plot Size</td><td id="ov-plot">—</td></tr>
+            <tr><td>Structure</td><td id="ov-structure">—</td></tr>
+            <tr><td>Foundation</td><td id="ov-foundation">—</td></tr>
+            <tr><td>Cost / sqm</td><td id="ov-costsqm">—</td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>System Pipeline</h3></div>
+          <div class="pipeline">
+            <div class="pipe-step"><span class="pipe-num">1</span><div><b>2D Drawing Input</b><span class="muted">Upload floor plan (PDF/PNG)</span></div></div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step"><span class="pipe-num">2</span><div><b>AI Quantity Takeoff</b><span class="muted">Computer-vision room &amp; wall detection</span></div></div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step"><span class="pipe-num">3</span><div><b>BOQ &amp; Cost Estimation</b><span class="muted">Rate-linked bill of quantities</span></div></div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step"><span class="pipe-num">4</span><div><b>Day-wise Schedule</b><span class="muted">Labour / material / machinery plan</span></div></div>
+            <div class="pipe-arrow">→</div>
+            <div class="pipe-step"><span class="pipe-num">5</span><div><b>Delay Risk + Cash Flow</b><span class="muted">Predictive analytics &amp; S-curve</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h3>Cumulative Cost S-Curve (Preview)</h3></div>
+        <canvas id="chart-overview-scurve" height="90"></canvas>
+      </div>
+    </section>
+
+    <!-- ===================== QTO ===================== -->
+    <section id="tab-qto" class="tab">
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head"><h3>Upload 2D Drawing</h3></div>
+          <p class="muted small">Upload a floor-plan image (PNG/JPG export of a CAD/PDF drawing). The system detects enclosed rooms via contour analysis and computes carpet area, wall length, and derived brickwork/plaster/flooring quantities.</p>
+          <div class="upload-box" id="upload-box">
+            <input type="file" id="qto-file" accept="image/*" hidden>
+            <div id="upload-hint">Drop an image here or click to browse<br><span class="muted small">Try the bundled sample plan below</span></div>
+            <img id="qto-preview" style="display:none" />
+          </div>
+          <div class="field-row">
+            <label>Scale (pixels per metre)</label>
+            <input type="number" id="px-per-m" value="60" min="10" max="500">
+          </div>
+          <div class="field-row">
+            <label>Wall height (m)</label>
+            <input type="number" id="wall-height" value="3.0" step="0.1" min="2" max="6">
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-secondary" id="btn-load-sample">Use Sample Plan</button>
+            <button class="btn btn-primary" id="btn-analyze">Run AI Takeoff</button>
+          </div>
+          <div id="qto-status" class="muted small"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>Detected Quantities</h3></div>
+          <div id="qto-results-empty" class="muted small">Run the takeoff to see detected rooms and quantities here.</div>
+          <div id="qto-results" style="display:none">
+            <div class="grid kpi-grid-3">
+              <div class="mini-kpi"><div class="mini-val" id="qto-rooms">—</div><div class="mini-lbl">Rooms Detected</div></div>
+              <div class="mini-kpi"><div class="mini-val" id="qto-area">—</div><div class="mini-lbl">Carpet Area (sqm)</div></div>
+              <div class="mini-kpi"><div class="mini-val" id="qto-wall">—</div><div class="mini-lbl">Wall Length (m)</div></div>
+            </div>
+            <table class="data-table" id="qto-derived-table"></table>
+            <div class="card-head" style="margin-top:16px"><h4>Room-wise Breakdown</h4></div>
+            <div class="table-scroll"><table class="data-table" id="qto-room-table"></table></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOQ ===================== -->
+    <section id="tab-boq" class="tab">
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head"><h3>Cost Distribution by Category</h3></div>
+          <canvas id="chart-boq-category" height="220"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Top Cost Contributors</h3></div>
+          <canvas id="chart-boq-top" height="220"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h3>Bill of Quantities</h3>
+          <input type="text" id="boq-search" placeholder="Search item…" class="search-input">
+        </div>
+        <div class="table-scroll tall"><table class="data-table" id="boq-table"></table></div>
+        <div class="table-total" id="boq-total"></div>
+      </div>
+    </section>
+
+    <!-- ===================== SCHEDULE ===================== -->
+    <section id="tab-schedule" class="tab">
+      <div class="card">
+        <div class="card-head"><h3>Construction Schedule (Gantt)</h3></div>
+        <div class="gantt-scroll"><canvas id="chart-gantt"></canvas></div>
+      </div>
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head"><h3>Day-wise Labour Requirement</h3></div>
+          <canvas id="chart-labour" height="200"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Day-wise Material Requirement (Cement)</h3></div>
+          <canvas id="chart-material" height="200"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h3>Daily Resource Schedule</h3>
+          <input type="date" id="schedule-date-filter" class="search-input">
+        </div>
+        <div class="table-scroll tall"><table class="data-table" id="resource-table"></table></div>
+      </div>
+    </section>
+
+    <!-- ===================== DELAY RISK ===================== -->
+    <section id="tab-delay" class="tab">
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head"><h3>Project Risk Inputs</h3></div>
+          <div class="field-row"><label>Planned Duration (days)</label><input type="number" id="in-duration" value="245"></div>
+          <div class="field-row"><label>Number of Floors</label><input type="number" id="in-floors" value="3"></div>
+          <div class="field-row"><label>Monsoon Exposure (days)</label><input type="number" id="in-monsoon" value="25"></div>
+          <div class="field-row"><label>Labour Availability (%)</label><input type="number" id="in-labour" value="80"></div>
+          <div class="field-row">
+            <label>Material Delay Risk</label>
+            <select id="in-material-risk"><option>Low</option><option selected>Medium</option><option>High</option></select>
+          </div>
+          <div class="field-row"><label>Contractor Experience (yrs)</label><input type="number" id="in-contractor" value="8"></div>
+          <div class="field-row"><label>Site Accessibility (1-10)</label><input type="number" id="in-access" value="7"></div>
+          <div class="field-row"><label>Design Change Frequency</label><input type="number" id="in-design" value="2"></div>
+          <div class="field-row"><label>Funding Regularity (1-10)</label><input type="number" id="in-funding" value="7"></div>
+          <div class="field-row"><label>Permit Delay (days)</label><input type="number" id="in-permit" value="10"></div>
+          <button class="btn btn-primary" id="btn-predict-delay" style="margin-top:8px">Predict Delay Risk</button>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h3>AI Prediction</h3></div>
+          <div id="delay-result-empty" class="muted small">Enter project parameters and click Predict.</div>
+          <div id="delay-result" style="display:none">
+            <div class="risk-gauge">
+              <div class="risk-value" id="delay-proba">—%</div>
+              <div class="risk-band" id="delay-band">—</div>
+            </div>
+            <table class="kv-table">
+              <tr><td>Expected Delay</td><td id="delay-days">—</td></tr>
+            </table>
+            <div class="card-head" style="margin-top:12px"><h4>Top Contributing Factors</h4></div>
+            <canvas id="chart-delay-factors" height="180"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Model Performance</h3></div>
+        <div class="grid kpi-grid-3">
+          <div class="mini-kpi"><div class="mini-val" id="model-acc">—</div><div class="mini-lbl">Accuracy</div></div>
+          <div class="mini-kpi"><div class="mini-val" id="model-auc">—</div><div class="mini-lbl">ROC-AUC</div></div>
+          <div class="mini-kpi"><div class="mini-val" id="model-mae">—</div><div class="mini-lbl">MAE (days)</div></div>
+        </div>
+        <p class="muted small">Trained on 260 synthetic-but-realistic historical construction projects using a Random Forest (200 trees). Features: planned duration, floor count, monsoon exposure, labour availability, material delay risk, contractor experience, site accessibility, design-change frequency, funding regularity, and permit delay.</p>
+      </div>
+    </section>
+
+    <!-- ===================== CASH FLOW ===================== -->
+    <section id="tab-cashflow" class="tab">
+      <div class="card">
+        <div class="card-head"><h3>Monthly Cash Flow (S-Curve)</h3></div>
+        <canvas id="chart-cashflow-monthly" height="200"></canvas>
+      </div>
+      <div class="grid two-col">
+        <div class="card">
+          <div class="card-head"><h3>Weekly Cash Flow — Material / Labour / Machinery</h3></div>
+          <canvas id="chart-cashflow-weekly" height="220"></canvas>
+        </div>
+        <div class="card">
+          <div class="card-head"><h3>Peak Fund Requirement</h3></div>
+          <table class="kv-table" id="cashflow-peak-table"></table>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Monthly Cash Flow Table</h3></div>
+        <div class="table-scroll"><table class="data-table" id="cashflow-monthly-table"></table></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

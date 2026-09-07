@@ -1,0 +1,41 @@
+sl_no,description,unit,quantity,rate_inr,amount_inr,category
+1,Site clearance and layout marking,sqm,216.0,18.0,3888.0,Preliminary
+2,"Earthwork excavation for foundation in ordinary soil, up to 1.5m depth",cum,168.0,210.0,35280.0,Earthwork
+3,"PCC (1:4:8) bed for footings, 100mm thick",cum,21.6,4650.0,100440.0,Substructure
+4,RCC M25 for isolated footings incl. formwork & reinforcement,cum,38.4,8250.0,316800.0,Substructure
+5,RCC M25 for column footings pedestal,cum,9.6,8450.0,81120.0,Substructure
+6,"Backfilling with excavated earth, consolidated in layers",cum,96.0,145.0,13920.0,Earthwork
+7,"RCC M25 for columns (G+2), incl. formwork & reinforcement",cum,64.8,9200.0,596160.0,Superstructure (RCC)
+8,RCC M25 for plinth beam,cum,14.2,8900.0,126380.0,Superstructure (RCC)
+9,"Brick masonry in CM 1:6 for plinth wall, 230mm thick",cum,22.5,5450.0,122625.0,Masonry
+10,"Damp proof course (DPC) 40mm thick, CC 1:2:4 with waterproofing compound",sqm,62.0,320.0,19840.0,Substructure
+11,"RCC M25 for beams (all floors), incl. formwork & reinforcement",cum,58.6,9350.0,547910.0,Superstructure (RCC)
+12,"RCC M25 for slabs (all floors), 125mm thick, incl. formwork & reinforcement",cum,91.1,9050.0,824455.0,Superstructure (RCC)
+13,RCC M25 for staircase waist slab and steps,cum,12.4,9550.0,118420.0,Superstructure (RCC)
+14,"Brick masonry in CM 1:6 for superstructure walls, 230mm thick (all floors)",cum,187.5,5600.0,1050000.0,Masonry
+15,"Brick masonry in CM 1:6 for partition walls, 115mm thick",cum,42.0,5850.0,245700.0,Masonry
+16,"Internal cement plastering, 12mm thick, CM 1:6",sqm,1450.0,175.0,253750.0,Finishing
+17,"External cement plastering (sponge finish), 20mm thick, CM 1:4",sqm,620.0,235.0,145700.0,Finishing
+18,"Ceiling plastering, 10mm thick, CM 1:4",sqm,540.0,190.0,102600.0,Finishing
+19,"Vitrified tile flooring (600x600mm), incl. bedding",sqm,486.0,950.0,461700.0,Finishing
+20,Anti-skid ceramic tile flooring for toilets/balcony,sqm,54.0,720.0,38880.0,Finishing
+21,Granite flooring for staircase and lobby,sqm,68.0,1450.0,98600.0,Finishing
+22,"Flush doors with frame (single leaf, 900mm)",nos,18.0,8200.0,147600.0,Doors & Windows
+23,Main door - teak wood frame with panel shutter,nos,6.0,22500.0,135000.0,Doors & Windows
+24,UPVC windows with glass shutters (1200x1200mm),nos,24.0,9800.0,235200.0,Doors & Windows
+25,Ventilators with glass louvers (600x450mm),nos,12.0,3200.0,38400.0,Doors & Windows
+26,"Internal wall painting - acrylic emulsion, two coats",sqm,1450.0,95.0,137750.0,Painting
+27,"External wall painting - exterior emulsion, two coats with primer",sqm,620.0,135.0,83700.0,Painting
+28,Enamel painting for doors/windows/grills,sqm,210.0,110.0,23100.0,Painting
+29,"Internal electrical wiring, wiring points (light/fan/plug)",point,168.0,950.0,159600.0,Electrical
+30,"Electrical distribution board, MCB, main switch installation",unit,6.0,6500.0,39000.0,Electrical
+31,Concealed plumbing - water supply lines (CPVC),point,42.0,1650.0,69300.0,Plumbing
+32,"Sanitary fittings - WC, wash basin, CP fittings (per toilet set)",set,6.0,18500.0,111000.0,Plumbing
+33,"Drainage and sewer lines, incl. PVC pipes and fittings",rm,96.0,620.0,59520.0,Plumbing
+34,"Overhead water tank (RCC, 5000L capacity) incl. plumbing",nos,1.0,45000.0,45000.0,Plumbing
+35,Terrace waterproofing (brick bat coba + APP membrane),sqm,180.0,385.0,69300.0,Waterproofing
+36,MS railing for staircase and balconies,rm,58.0,1850.0,107300.0,Miscellaneous
+37,"Compound wall (brick masonry with plaster & paint), 1.8m height",rm,60.0,2450.0,147000.0,Miscellaneous
+38,Gate - MS fabricated with painting,nos,1.0,28000.0,28000.0,Miscellaneous
+39,"Site development - paving, minor landscaping",sqm,60.0,620.0,37200.0,Miscellaneous
+40,Miscellaneous works & contingency provision (2.5%),LS,1.0,174428.45,174428.45,Contingency

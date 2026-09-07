@@ -1,0 +1,20 @@
+{
+  "classifier_accuracy": 0.8077,
+  "classifier_auc": 0.8402,
+  "regressor_mae_days": 13.19,
+  "feature_importance": {
+    "planned_duration_days": 0.0824,
+    "num_floors": 0.0334,
+    "monsoon_exposure_days": 0.2932,
+    "labour_availability_pct": 0.128,
+    "material_delay_risk_enc": 0.0805,
+    "contractor_experience_years": 0.0911,
+    "site_accessibility_score": 0.1009,
+    "design_change_frequency": 0.0427,
+    "funding_regularity_score": 0.0608,
+    "permit_delay_days": 0.087
+  },
+  "train_size": 208,
+  "test_size": 52,
+  "algorithm": "Random Forest (200 trees, max_depth=6)"
+}

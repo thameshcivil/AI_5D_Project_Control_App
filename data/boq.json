@@ -1,0 +1,362 @@
+[
+  {
+    "sl_no":"1",
+    "description":"Site clearance and layout marking",
+    "unit":"sqm",
+    "quantity":216.0,
+    "rate_inr":18.0,
+    "amount_inr":3888.0,
+    "category":"Preliminary"
+  },
+  {
+    "sl_no":"2",
+    "description":"Earthwork excavation for foundation in ordinary soil, up to 1.5m depth",
+    "unit":"cum",
+    "quantity":168.0,
+    "rate_inr":210.0,
+    "amount_inr":35280.0,
+    "category":"Earthwork"
+  },
+  {
+    "sl_no":"3",
+    "description":"PCC (1:4:8) bed for footings, 100mm thick",
+    "unit":"cum",
+    "quantity":21.6,
+    "rate_inr":4650.0,
+    "amount_inr":100440.0,
+    "category":"Substructure"
+  },
+  {
+    "sl_no":"4",
+    "description":"RCC M25 for isolated footings incl. formwork & reinforcement",
+    "unit":"cum",
+    "quantity":38.4,
+    "rate_inr":8250.0,
+    "amount_inr":316800.0,
+    "category":"Substructure"
+  },
+  {
+    "sl_no":"5",
+    "description":"RCC M25 for column footings pedestal",
+    "unit":"cum",
+    "quantity":9.6,
+    "rate_inr":8450.0,
+    "amount_inr":81120.0,
+    "category":"Substructure"
+  },
+  {
+    "sl_no":"6",
+    "description":"Backfilling with excavated earth, consolidated in layers",
+    "unit":"cum",
+    "quantity":96.0,
+    "rate_inr":145.0,
+    "amount_inr":13920.0,
+    "category":"Earthwork"
+  },
+  {
+    "sl_no":"7",
+    "description":"RCC M25 for columns (G+2), incl. formwork & reinforcement",
+    "unit":"cum",
+    "quantity":64.8,
+    "rate_inr":9200.0,
+    "amount_inr":596160.0,
+    "category":"Superstructure (RCC)"
+  },
+  {
+    "sl_no":"8",
+    "description":"RCC M25 for plinth beam",
+    "unit":"cum",
+    "quantity":14.2,
+    "rate_inr":8900.0,
+    "amount_inr":126380.0,
+    "category":"Superstructure (RCC)"
+  },
+  {
+    "sl_no":"9",
+    "description":"Brick masonry in CM 1:6 for plinth wall, 230mm thick",
+    "unit":"cum",
+    "quantity":22.5,
+    "rate_inr":5450.0,
+    "amount_inr":122625.0,
+    "category":"Masonry"
+  },
+  {
+    "sl_no":"10",
+    "description":"Damp proof course (DPC) 40mm thick, CC 1:2:4 with waterproofing compound",
+    "unit":"sqm",
+    "quantity":62.0,
+    "rate_inr":320.0,
+    "amount_inr":19840.0,
+    "category":"Substructure"
+  },
+  {
+    "sl_no":"11",
+    "description":"RCC M25 for beams (all floors), incl. formwork & reinforcement",
+    "unit":"cum",
+    "quantity":58.6,
+    "rate_inr":9350.0,
+    "amount_inr":547910.0,
+    "category":"Superstructure (RCC)"
+  },
+  {
+    "sl_no":"12",
+    "description":"RCC M25 for slabs (all floors), 125mm thick, incl. formwork & reinforcement",
+    "unit":"cum",
+    "quantity":91.1,
+    "rate_inr":9050.0,
+    "amount_inr":824455.0,
+    "category":"Superstructure (RCC)"
+  },
+  {
+    "sl_no":"13",
+    "description":"RCC M25 for staircase waist slab and steps",
+    "unit":"cum",
+    "quantity":12.4,
+    "rate_inr":9550.0,
+    "amount_inr":118420.0,
+    "category":"Superstructure (RCC)"
+  },
+  {
+    "sl_no":"14",
+    "description":"Brick masonry in CM 1:6 for superstructure walls, 230mm thick (all floors)",
+    "unit":"cum",
+    "quantity":187.5,
+    "rate_inr":5600.0,
+    "amount_inr":1050000.0,
+    "category":"Masonry"
+  },
+  {
+    "sl_no":"15",
+    "description":"Brick masonry in CM 1:6 for partition walls, 115mm thick",
+    "unit":"cum",
+    "quantity":42.0,
+    "rate_inr":5850.0,
+    "amount_inr":245700.0,
+    "category":"Masonry"
+  },
+  {
+    "sl_no":"16",
+    "description":"Internal cement plastering, 12mm thick, CM 1:6",
+    "unit":"sqm",
+    "quantity":1450.0,
+    "rate_inr":175.0,
+    "amount_inr":253750.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"17",
+    "description":"External cement plastering (sponge finish), 20mm thick, CM 1:4",
+    "unit":"sqm",
+    "quantity":620.0,
+    "rate_inr":235.0,
+    "amount_inr":145700.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"18",
+    "description":"Ceiling plastering, 10mm thick, CM 1:4",
+    "unit":"sqm",
+    "quantity":540.0,
+    "rate_inr":190.0,
+    "amount_inr":102600.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"19",
+    "description":"Vitrified tile flooring (600x600mm), incl. bedding",
+    "unit":"sqm",
+    "quantity":486.0,
+    "rate_inr":950.0,
+    "amount_inr":461700.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"20",
+    "description":"Anti-skid ceramic tile flooring for toilets\/balcony",
+    "unit":"sqm",
+    "quantity":54.0,
+    "rate_inr":720.0,
+    "amount_inr":38880.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"21",
+    "description":"Granite flooring for staircase and lobby",
+    "unit":"sqm",
+    "quantity":68.0,
+    "rate_inr":1450.0,
+    "amount_inr":98600.0,
+    "category":"Finishing"
+  },
+  {
+    "sl_no":"22",
+    "description":"Flush doors with frame (single leaf, 900mm)",
+    "unit":"nos",
+    "quantity":18.0,
+    "rate_inr":8200.0,
+    "amount_inr":147600.0,
+    "category":"Doors & Windows"
+  },
+  {
+    "sl_no":"23",
+    "description":"Main door - teak wood frame with panel shutter",
+    "unit":"nos",
+    "quantity":6.0,
+    "rate_inr":22500.0,
+    "amount_inr":135000.0,
+    "category":"Doors & Windows"
+  },
+  {
+    "sl_no":"24",
+    "description":"UPVC windows with glass shutters (1200x1200mm)",
+    "unit":"nos",
+    "quantity":24.0,
+    "rate_inr":9800.0,
+    "amount_inr":235200.0,
+    "category":"Doors & Windows"
+  },
+  {
+    "sl_no":"25",
+    "description":"Ventilators with glass louvers (600x450mm)",
+    "unit":"nos",
+    "quantity":12.0,
+    "rate_inr":3200.0,
+    "amount_inr":38400.0,
+    "category":"Doors & Windows"
+  },
+  {
+    "sl_no":"26",
+    "description":"Internal wall painting - acrylic emulsion, two coats",
+    "unit":"sqm",
+    "quantity":1450.0,
+    "rate_inr":95.0,
+    "amount_inr":137750.0,
+    "category":"Painting"
+  },
+  {
+    "sl_no":"27",
+    "description":"External wall painting - exterior emulsion, two coats with primer",
+    "unit":"sqm",
+    "quantity":620.0,
+    "rate_inr":135.0,
+    "amount_inr":83700.0,
+    "category":"Painting"
+  },
+  {
+    "sl_no":"28",
+    "description":"Enamel painting for doors\/windows\/grills",
+    "unit":"sqm",
+    "quantity":210.0,
+    "rate_inr":110.0,
+    "amount_inr":23100.0,
+    "category":"Painting"
+  },
+  {
+    "sl_no":"29",
+    "description":"Internal electrical wiring, wiring points (light\/fan\/plug)",
+    "unit":"point",
+    "quantity":168.0,
+    "rate_inr":950.0,
+    "amount_inr":159600.0,
+    "category":"Electrical"
+  },
+  {
+    "sl_no":"30",
+    "description":"Electrical distribution board, MCB, main switch installation",
+    "unit":"unit",
+    "quantity":6.0,
+    "rate_inr":6500.0,
+    "amount_inr":39000.0,
+    "category":"Electrical"
+  },
+  {
+    "sl_no":"31",
+    "description":"Concealed plumbing - water supply lines (CPVC)",
+    "unit":"point",
+    "quantity":42.0,
+    "rate_inr":1650.0,
+    "amount_inr":69300.0,
+    "category":"Plumbing"
+  },
+  {
+    "sl_no":"32",
+    "description":"Sanitary fittings - WC, wash basin, CP fittings (per toilet set)",
+    "unit":"set",
+    "quantity":6.0,
+    "rate_inr":18500.0,
+    "amount_inr":111000.0,
+    "category":"Plumbing"
+  },
+  {
+    "sl_no":"33",
+    "description":"Drainage and sewer lines, incl. PVC pipes and fittings",
+    "unit":"rm",
+    "quantity":96.0,
+    "rate_inr":620.0,
+    "amount_inr":59520.0,
+    "category":"Plumbing"
+  },
+  {
+    "sl_no":"34",
+    "description":"Overhead water tank (RCC, 5000L capacity) incl. plumbing",
+    "unit":"nos",
+    "quantity":1.0,
+    "rate_inr":45000.0,
+    "amount_inr":45000.0,
+    "category":"Plumbing"
+  },
+  {
+    "sl_no":"35",
+    "description":"Terrace waterproofing (brick bat coba + APP membrane)",
+    "unit":"sqm",
+    "quantity":180.0,
+    "rate_inr":385.0,
+    "amount_inr":69300.0,
+    "category":"Waterproofing"
+  },
+  {
+    "sl_no":"36",
+    "description":"MS railing for staircase and balconies",
+    "unit":"rm",
+    "quantity":58.0,
+    "rate_inr":1850.0,
+    "amount_inr":107300.0,
+    "category":"Miscellaneous"
+  },
+  {
+    "sl_no":"37",
+    "description":"Compound wall (brick masonry with plaster & paint), 1.8m height",
+    "unit":"rm",
+    "quantity":60.0,
+    "rate_inr":2450.0,
+    "amount_inr":147000.0,
+    "category":"Miscellaneous"
+  },
+  {
+    "sl_no":"38",
+    "description":"Gate - MS fabricated with painting",
+    "unit":"nos",
+    "quantity":1.0,
+    "rate_inr":28000.0,
+    "amount_inr":28000.0,
+    "category":"Miscellaneous"
+  },
+  {
+    "sl_no":"39",
+    "description":"Site development - paving, minor landscaping",
+    "unit":"sqm",
+    "quantity":60.0,
+    "rate_inr":620.0,
+    "amount_inr":37200.0,
+    "category":"Miscellaneous"
+  },
+  {
+    "sl_no":"40",
+    "description":"Miscellaneous works & contingency provision (2.5%)",
+    "unit":"LS",
+    "quantity":1.0,
+    "rate_inr":174428.45,
+    "amount_inr":174428.45,
+    "category":"Contingency"
+  }
+]
